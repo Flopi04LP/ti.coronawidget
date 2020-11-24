@@ -32,11 +32,11 @@ function downloadData(data) {
 				if (dTarget == 1) {
 					widgetData.town1 = town1;
 					widgetData.value1 = icon + parseFloat(json.features[0].attributes.cases7_per_100k).toFixed(1);
-					widgetData.updateTime1 = "Stand: " + json.features[0].attributes.last_update;
+					widgetData.updateTime1 = "Stand: " + 99999;
 				} else {
 					widgetData.town2 = town2;
 					widgetData.value2 = icon + parseFloat(json.features[0].attributes.cases7_per_100k).toFixed(1);
-					widgetData.updateTime2 = "Stand: " + json.features[0].attributes.last_update;
+					widgetData.updateTime2 = "Stand: "+99999;
 				}
 				Ti.App.Properties.setObject("widgetData", widgetData);
 				if (data.callback) {
