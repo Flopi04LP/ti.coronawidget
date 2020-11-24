@@ -21,8 +21,8 @@ function updatePreview() {
 		value2: "-"
 	})
 
-	$.lbl_preview1.text = Ti.App.Properties.getString("town1", "Berlin") + ": " + widgetData.value1;
-	$.lbl_preview2.text = Ti.App.Properties.getString("town2", "Munich") + ": " + widgetData.value2;
+	$.lbl_preview1.text = Ti.App.Properties.getString("town1", "Baden") + ": " + widgetData.value1;
+	$.lbl_preview2.text = Ti.App.Properties.getString("town2", "Bern") + ": " + widgetData.value2;
 	hideLoading()
 }
 
@@ -38,22 +38,22 @@ function hideLoading(){
 function onOpen(e) {
 	if (Ti.App.Properties.getBool("firstStart", true)) {
 		// set values for first start
-		Ti.App.Properties.setString("town1", "Berlin");
-		Ti.App.Properties.setString("town2", "Munich");
-		Ti.App.Properties.setString("lat2", "48.135124");
-		Ti.App.Properties.setString("lon2", "11.581981");
-		Ti.App.Properties.setString("lat2", "52.520008");
-		Ti.App.Properties.setString("lon2", "13.404954");
+		Ti.App.Properties.setString("town1", "Baden");
+		Ti.App.Properties.setString("town2", "Bern");
+		Ti.App.Properties.setString("lat2", "47.475361");
+		Ti.App.Properties.setString("lon2", "8.306372");
+		Ti.App.Properties.setString("lat2", "46.947456");
+		Ti.App.Properties.setString("lon2", "7.451123");
 		Ti.App.Properties.setBool("firstStart", false);
 		Ti.App.Properties.setString("icon", "🦠");
 	}
 
-	$.tf_lat1.value = Ti.App.Properties.getString("lat1", "48.135124");
-	$.tf_lon1.value = Ti.App.Properties.getString("lon1", "11.581981");
-	$.tf_lat2.value = Ti.App.Properties.getString("lat2", "52.520008");
-	$.tf_lon2.value = Ti.App.Properties.getString("lon2", "13.404954");
-	$.tf_town1.value = Ti.App.Properties.getString("town1", "Berlin");
-	$.tf_town2.value = Ti.App.Properties.getString("town2", "Munich");
+	$.tf_lat1.value = Ti.App.Properties.getString("lat1", "47.475361");
+	$.tf_lon1.value = Ti.App.Properties.getString("lon1", "8.306372");
+	$.tf_lat2.value = Ti.App.Properties.getString("lat2", "46.947456");
+	$.tf_lon2.value = Ti.App.Properties.getString("lon2", "7.451123");
+	$.tf_town1.value = Ti.App.Properties.getString("town1", "Baden");
+	$.tf_town2.value = Ti.App.Properties.getString("town2", "Bern");
 	$.tf_icon.value = Ti.App.Properties.getString("icon", "🦠");
 
 	showLoading();
